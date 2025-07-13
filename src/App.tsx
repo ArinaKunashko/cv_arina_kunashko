@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import AppBarComponent from "./AppBar/AppBarComponent";
+import MainComponent from "./MainComponent/MainComponent";
+import i18n from './i18n';
+import AboutComponent from "./About/AboutComponent";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [lang, setLang] = useState(i18n.language);
+    const toggleLang = () => {
+        const newLang = lang === 'en' ? 'ru' : 'en';
+        i18n.changeLanguage(newLang);
+        setLang(newLang);
+    };
+
+    const t: any = i18n.t;
+
+    return (
+        <div>
+            <AppBarComponent onToggleLang={toggleLang} />
+            <MainComponent/>
+            <AboutComponent />
+        </div>
+    );
 }
 
 export default App;

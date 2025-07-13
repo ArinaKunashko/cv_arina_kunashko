@@ -1,0 +1,33 @@
+.aboutContent {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 10rem;
+}
+
+.aboutSection {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.title {
+   display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.cardsSection {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.card {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+}
