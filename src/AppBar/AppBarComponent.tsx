@@ -13,7 +13,7 @@ type AppBarComponentProps = {
 export default function AppBarComponent({ onToggleLang }: AppBarComponentProps) {
     const t: any = i18n.t;
 
-    const navigationItems = [t('aboutTitle'), t('portfolio'), t('resume'), t('contacts')];
+    const navigationItems = [t('aboutTitle'), t('resume'), t('contacts')];
     function handleChangeLang() {
         onToggleLang();
     }

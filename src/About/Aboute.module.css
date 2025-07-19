@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    padding: 10rem;
+    padding: 5rem 10rem;
 }
 
 .aboutSection {
@@ -13,10 +13,9 @@
 
 .title {
    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
     width: 100%;
 }
 .cardsSection {
@@ -29,5 +28,33 @@
     display: flex;
     flex: 1;
     flex-direction: column;
+}
+
+.line {
+    background-color: #FDC435;
+    height: 4px;
+    width: 100px;
+    border-radius: 8px;
+}
+
+.seporate {
+    background-color: #bdbdbd;
+    height: 1px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+.experienceBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.experienceContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 10px;
+
 
 }

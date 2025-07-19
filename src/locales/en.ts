@@ -26,7 +26,9 @@ export default {
     contacts: 'Contacts',
     projects: 'Projects',
     freelance: 'Freelance',
-    dateStocrm: 'January 2024 - Present ',
+    dateLofty: 'December 2024 – Present',
+    roleLofty: 'Maintaining and developing new functionality across three active projects using Vue.js 3, TypeScript, Tailwind CSS, and Vuetify. Implementing UI components based on Figma designs, including responsive layout. Working with data tables, including complex logic for filtering, sorting, and pagination. Participating in code reviews and optimizing code.',
+    dateStocrm: 'January 2024 – December 2024',
     roleStocrm: 'I develop and implement new functionalities for the CRM system to enhance user efficiency. I optimize and improve the existing functionality of the CRM system. I design and create user interfaces using pure CSS, ensuring cross-browser compatibility and responsiveness. I utilize the Options API and Composition API in Vue.js to develop reactive components, which enhances user experience and simplifies code maintenance. I develop and implement reusable components to increase development efficiency and facilitate project support (including inputs, dropdowns, counters, text fields, calendars, and time components). My work also includes the implementation of new functionalities in calendars, tables, working with cash registers, and creating builders (such as various types of notifications about system updates) for internal use.',
     achievementsStocrm: 'I successfully participated in the migration of the system from Vue 2 to Vue 3, ensuring a smooth transition to the new version.',
     dateDeneb: 'October 2023 - January 2024',
@@ -56,6 +58,8 @@ export default {
     technocroy: 'Technocroy',
     crmSystem: 'CRM system',
     lg: 'RU',
+    Moscow: 'Moscow, Russia',
+    Dublin: 'Dublin, Ireland',
     describtionCRM: 'I develop new and optimize existing functionality of the CRM system, creating reusable components to improve development efficiency (inputs, dropdowns, tables, graphs). I also implement new functionality in calendars and tables, work with cash registers and create constructors for notifications about system updates.'
 
 };

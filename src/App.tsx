@@ -4,6 +4,9 @@ import AppBarComponent from "./AppBar/AppBarComponent";
 import MainComponent from "./MainComponent/MainComponent";
 import i18n from './i18n';
 import AboutComponent from "./About/AboutComponent";
+import Resume from "./Resume/Resume";
+import Contacts from "./Contacts/Contacts";
+
 
 function App() {
     const [lang, setLang] = useState(i18n.language);
@@ -16,10 +19,12 @@ function App() {
     const t: any = i18n.t;
 
     return (
-        <div>
+        <div className="App">
             <AppBarComponent onToggleLang={toggleLang} />
             <MainComponent/>
             <AboutComponent />
+            <Resume />
+            <Contacts />
         </div>
     );
 }

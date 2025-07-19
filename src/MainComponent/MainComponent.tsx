@@ -16,7 +16,7 @@ export default function MainComponent() {
                 alignItems: 'center',
                 justifyContent: 'center'
             }}>
-                <Typography variant="h6">
+                <Typography variant="h6" color="#FDC435">
                     {t('hi')}
                 </Typography>
                 <Typography variant="h3">{t('performanceName')}</Typography>

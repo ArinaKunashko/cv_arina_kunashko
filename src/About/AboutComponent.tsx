@@ -40,26 +40,38 @@ export default function AboutComponent() {
         <div className={classes.aboutContent}>
             <div className={classes.aboutSection}>
                 <Box className={classes.title}>
-                    <Typography>{t('aboutMe')}</Typography>
+                    <Box sx={{display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
+                    <Typography variant="h4" >{t('aboutMe')}</Typography>
+                    <div className={classes.line} ></div>
+                    </Box>
                 </Box>
                 <Box sx={{width: 1}}>
-                    <Typography>{t('aboutContent')}</Typography>
-                    <Typography>2.5 {t('experience')}</Typography>
+                    <Typography variant="subtitle1" sx={{textAlign: 'start'}}>{t('aboutContent')}</Typography>
+                    <Box className={classes.experienceContainer}>
+                      <Typography variant="h3" sx={{color: 'grey.400'}}> 2.5</Typography>
+                        <Box className={classes.experienceBlock}>
+                            <div className={classes.seporate}></div>
+                            <Typography variant="subtitle1" sx={{color: 'grey.400', textAlign: 'start'}}>{t('experience')}</Typography>
+                        </Box>
+                    </Box>
+
+
                 </Box>
             </div>
+
             <div className={classes.cardsSection}>{cards.map(el => (
                 <Card key={el.id} className={classes.card}>
-                    <CardContent>
-                        <Typography>
+                    <CardContent sx={{display: 'flex', flexDirection: 'column', gap: '5px'}}>
+                        <Typography variant="h6" sx={{color: '#FDC435', padding: '5px'}}>
                             {el.title}
                         </Typography>
-                        <Typography>
+                        <Typography variant="subtitle2" sx={{'text-align': 'start', }}>
                             {el.description}
                         </Typography>
-                        <Typography>
+                        <Typography variant="subtitle2" sx={{'text-align': 'start', }}>
                             {el.additionInfo}
                         </Typography>
-                        <Typography>
+                        <Typography variant="subtitle2" sx={{'text-align': 'start', }}>
                             {el.languages}
                         </Typography>
                     </CardContent>
