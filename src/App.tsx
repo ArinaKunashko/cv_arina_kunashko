@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import './App.css';
 import AppBarComponent from "./AppBar/AppBarComponent";
 import MainComponent from "./MainComponent/MainComponent";
@@ -18,13 +18,40 @@ function App() {
 
     const t: any = i18n.t;
 
+    const startRef = useRef<HTMLDivElement>(null)
+    const abouteRef = useRef<HTMLDivElement>(null)
+    const resumeRef = useRef<HTMLDivElement>(null)
+    const contactsRef = useRef<HTMLDivElement>(null)
+
+    const scrollToSection = (section: string) => {
+        const sectionMap: Record<string, React.RefObject<HTMLDivElement | null> > = {
+            [t('start')]: startRef,
+            [t('aboutTitle')]: abouteRef,
+            [t('resume')]: resumeRef,
+            [t('contacts')]: contactsRef
+        }
+        const currentRef = sectionMap[section]
+        if (currentRef && currentRef.current) {
+            currentRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+
     return (
         <div className="App">
-            <AppBarComponent onToggleLang={toggleLang} />
-            <MainComponent/>
-            <AboutComponent />
-            <Resume />
-            <Contacts />
+            <AppBarComponent onToggleLang={toggleLang} onNavigate={scrollToSection}/>
+            <div ref={startRef}>
+                <MainComponent/>
+            </div>
+            <div ref={abouteRef}>
+                <AboutComponent />
+            </div>
+            <div ref={resumeRef}>
+                <Resume />
+            </div>
+            <div ref={contactsRef} >
+                <Contacts onNavigate={scrollToSection}/>
+            </div>
         </div>
     );
 }

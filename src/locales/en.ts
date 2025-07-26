@@ -57,7 +57,7 @@ export default {
     goToTheWebsite: 'Go to the website',
     technocroy: 'Technocroy',
     crmSystem: 'CRM system',
-    lg: 'RU',
+    lg: 'EN',
     Moscow: 'Moscow, Russia',
     Dublin: 'Dublin, Ireland',
     describtionCRM: 'I develop new and optimize existing functionality of the CRM system, creating reusable components to improve development efficiency (inputs, dropdowns, tables, graphs). I also implement new functionality in calendars and tables, work with cash registers and create constructors for notifications about system updates.'

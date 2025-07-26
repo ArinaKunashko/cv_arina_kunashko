@@ -1,5 +1,5 @@
 .mainComponent {
-    margin-top: 100px;
+    padding-top: 100px;
     display: flex;
     flex-direction: row;
     padding-bottom: 10rem;
